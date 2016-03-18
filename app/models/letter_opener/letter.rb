@@ -21,6 +21,7 @@ module LetterOpener
     end
 
     def default_style
+      return :rich
       @default_style ||= begin
         [:plain, :rich].detect do |style|
           File.exist? filepath(style)
